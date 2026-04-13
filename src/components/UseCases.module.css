@@ -1,0 +1,92 @@
+.section {
+  padding: 6rem 2rem;
+  position: relative;
+  border-top: 0.5px solid var(--border);
+}
+
+.sectionInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sectionTag {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sectionTag::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+  max-width: 120px;
+}
+
+.sectionTitle {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.sectionSub {
+  font-size: 16px;
+  color: var(--fg2);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 4rem;
+}
+
+.usecases {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.5px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+  margin-top: 3rem;
+}
+
+.usecase {
+  background: var(--card);
+  padding: 1.8rem;
+  transition: background 0.2s;
+}
+
+.usecase:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ucIcon {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.ucTitle {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.ucDesc {
+  font-size: 12px;
+  color: var(--fg2);
+  line-height: 1.7;
+}
+
+.ucPrice {
+  margin-top: 1rem;
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}

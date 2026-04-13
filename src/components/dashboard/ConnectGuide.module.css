@@ -1,0 +1,115 @@
+.dashPanel {
+  background: var(--card);
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.dashPanelHdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.dpTitle {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.dpBadge {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  background: var(--accentbg);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.connectCode {
+  font-family: var(--font-dm-mono), monospace;
+  color: var(--fg2);
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px;
+  line-height: 1.8;
+  overflow-x: auto;
+  white-space: pre;
+  margin-top: 0.8rem;
+  font-size: 11px;
+}
+
+.promptChip {
+  background: var(--accentbg);
+  border: 0.5px solid var(--accentborder);
+  border-radius: 3px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 11px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.promptChip:hover {
+  background: rgba(0, 214, 143, 0.15);
+}
+
+.contractBox {
+  border: 0.5px solid var(--accentborder);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  background: var(--accentbg);
+  margin-bottom: 1rem;
+}
+
+.cbLabel {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 9px;
+  color: var(--fg3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.cbVal {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 11px;
+  color: var(--fg);
+  word-break: break-all;
+}
+
+.cbLink {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  color: var(--accent);
+  border: 0.5px solid var(--accentborder);
+  border-radius: 2px;
+  padding: 6px;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: background 0.15s;
+}
+
+.cbLink:hover {
+  background: rgba(0, 214, 143, 0.15);
+}
+
+.offline {
+  color: var(--red);
+  background: rgba(255, 77, 77, 0.1);
+}
+
+.online {
+  color: var(--accent);
+  background: var(--accentbg);
+}
