@@ -5,15 +5,6 @@ import { useWallet } from '@/context/WalletContext';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
-  const { isConnected, connect } = useWallet();
-
-  const handleLaunchApp = (e: React.MouseEvent) => {
-    if (!isConnected) {
-      e.preventDefault();
-      connect();
-    }
-  };
-
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
@@ -25,13 +16,14 @@ const Navbar = () => {
         <Link href="#usecases">Use cases</Link>
         <Link href="/dashboard">Dashboard</Link>
       </div>
-      <Link 
-        href="/dashboard" 
+      <a 
+        href="https://github.com/SumitRaikwar18/PayWall.ai" 
         className={styles.navCta}
-        onClick={handleLaunchApp}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        {isConnected ? 'Go to Dashboard →' : 'Launch App →'}
-      </Link>
+        View on GitHub
+      </a>
     </nav>
   );
 };

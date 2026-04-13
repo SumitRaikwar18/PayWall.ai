@@ -12,19 +12,9 @@ import { useProxyData } from '@/hooks/useProxyData';
 
 export default function DashboardPage() {
   const [lastUpdated, setLastUpdated] = useState<string>('—');
-  const [showDropdown, setShowDropdown] = useState(false);
-  const { address, disconnect } = useWallet();
   const { payments, services, proxyOnline } = useProxyData();
 
-  useEffect(() => {
-    setLastUpdated(new Date().toLocaleTimeString());
-    const interval = setInterval(() => {
-      setLastUpdated(new Date().toLocaleTimeString());
-    }, 30000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const truncatedAddress = address ? `${address.slice(0, 4)}...${address.slice(-4)}` : 'Not Connected';
+  const truncatedAddress = 'Guest Mode';
 
   return (
     <div className={styles.dashPage}>
@@ -38,24 +28,14 @@ export default function DashboardPage() {
           <div className={styles.liveBadge}><div className={styles.liveDot}></div>Live</div>
           <div className={styles.dashNet}>stellar:testnet</div>
           
-          <div className={styles.walletWrapper}>
-            <button 
-              className={styles.backBtn}
-              onClick={() => setShowDropdown(!showDropdown)}
-            >
-              {truncatedAddress} ▾
-            </button>
-            {showDropdown && (
-              <div className={styles.dropdown}>
-                <button 
-                  className={styles.dropdownItem} 
-                  onClick={() => { disconnect(); setShowDropdown(false); }}
-                >
-                  <span>🔒</span> Disconnect Wallet
-                </button>
-              </div>
-            )}
-          </div>
+          <a 
+            href="https://github.com/SumitRaikwar18/PayWall.ai" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className={styles.backBtn}
+          >
+            GitHub Repo ↗
+          </a>
         </div>
       </header>
 

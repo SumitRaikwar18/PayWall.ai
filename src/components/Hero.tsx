@@ -1,19 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useWallet } from '@/context/WalletContext';
 import styles from './Hero.module.css';
 
 const Hero = () => {
-  const { isConnected, connect } = useWallet();
-
-  const handleDashboardClick = (e: React.MouseEvent) => {
-    if (!isConnected) {
-      e.preventDefault();
-      connect();
-    }
-  };
-
   return (
     <>
       <section className={styles.hero}>
@@ -36,13 +26,14 @@ const Hero = () => {
         </p>
 
         <div className={styles.heroActions}>
-          <Link 
-            href="/dashboard" 
+          <a 
+            href="https://github.com/SumitRaikwar18/PayWall.ai" 
             className={styles.btnPrimary}
-            onClick={handleDashboardClick}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            {isConnected ? 'Go to Dashboard →' : 'Open Dashboard →'}
-          </Link>
+            View on GitHub →
+          </a>
           <Link href="#how" className={styles.btnSecondary}>
             See how it works
           </Link>
