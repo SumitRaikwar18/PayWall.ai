@@ -32,7 +32,7 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View on GitHub →
+            GitHub →
           </a>
           <Link href="#how" className={styles.btnSecondary}>
             See how it works

@@ -22,7 +22,7 @@ const Navbar = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        View on GitHub
+        GitHub
       </a>
     </nav>
   );
