@@ -66,7 +66,7 @@ server.tool(
       let paymentPayload = await x402client.createPaymentPayload(paymentRequired);
       
       const networkPassphrase = getNetworkPassphrase(NETWORK);
-      const tx = new Transaction(paymentPayload.payload.transaction, networkPassphrase);
+      const tx = new Transaction(paymentPayload.payload.transaction as string, networkPassphrase);
       const sorobanData = tx.toEnvelope().v1()?.tx()?.ext()?.sorobanData();
 
       if (sorobanData) {
